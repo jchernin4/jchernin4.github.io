@@ -1,0 +1,24 @@
+ .vl {
+ 	background-color: black;
+	margin-left: 180px;
+	margin-right: 180px;
+ }
+
+/*.vl {
+  border-left: 6px solid black;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}*/
+
+ .blank {
+ 	background-color: white;
+ }
+
+ .grid-container {
+ 	display: grid;
+	padding: 10px;
+ 	grid-template-columns: 40% 20% 40%;
+ }
