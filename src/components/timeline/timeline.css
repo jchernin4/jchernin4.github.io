@@ -135,3 +135,22 @@ body {
 		left: 0%;
 	}
 }
+
+
+video {
+	margin-top: 20px;
+	width: 460px;
+	height: 250px;
+}
+
+img {
+	margin-top: 20px;
+	width: 460px;
+	height: 220px;
+}
+
+iframe {
+	margin-top: 20px;
+	width: 460px;
+	height: 220px;
+}
