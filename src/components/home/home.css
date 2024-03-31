@@ -1,0 +1,19 @@
+.intro {
+	display: flex;
+	justify-self: center;
+	color: var(--text);
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+}
+
+.skillscontainer {
+	margin-left: 100px;
+	margin-right: 100px;
+	display: grid;
+	gap: 20px 20px;
+
+	grid-template-columns: auto auto auto auto auto auto;
+
+	padding: 10px;
+}

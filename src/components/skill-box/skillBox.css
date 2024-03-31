@@ -1,0 +1,16 @@
+.box {
+	border-width: 4px;
+	border-style: solid;
+	border-color: var(--flamingo);
+	margin: auto;
+	padding: 20px;
+}
+
+.skillimage {
+	width: 200px;
+	height: 200px;
+}
+
+.description {
+	color: var(--text);
+}
