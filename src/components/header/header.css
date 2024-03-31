@@ -1,6 +1,6 @@
 .header {
 	overflow: hidden;
-	position: fixed;
+	/*position: fixed; Temporarily commenting this out, this is what makes it sticky but it won't stop hiding the start of the content*/
 	width: 100%;
 	top: 0px;
 	background-color: var(--mantle);
