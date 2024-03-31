@@ -18,9 +18,10 @@
 }
 
 .logo {
+	text-decoration: none;
 	color: var(--flamingo);
 	transition: color 0.4s;
-	font-size: 1.25rem;;
+	font-size: 1.25rem;
 	/*font-family: var(--second-font);*/
 }
 
@@ -58,6 +59,7 @@
 }
 
 .navlink {
+	text-decoration: none;
 	color: var(--text);
 	font-weight: 600;
 	transition: color 0.4s;
