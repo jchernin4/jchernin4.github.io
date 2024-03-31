@@ -9,8 +9,7 @@ const Layout = () => {
 		<div>
 			<Header/>
 
-
-			<Outlet />
+			<Outlet/>
 		</div>
 	);
 };
