@@ -1,11 +1,9 @@
 import React from "react";
 
+/*<header className="App-header">{header && <h1>{header}</h1>}</header>*/
+
 const Page = ({ header, children }) => (
 	<div className="App">
-		<header className="App-header">
-			{header && <h1>{header}</h1>}
-		</header>
-
 		<body>{children}</body>
 	</div>
 );

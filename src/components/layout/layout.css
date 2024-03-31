@@ -1,1 +1,6 @@
-
+header {
+	display: flex;
+	justify-content: space-between;
+	gap: 75%;
+	width: 100%;
+}

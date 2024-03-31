@@ -64,9 +64,9 @@ function TimelineBox({ c, title, date, link, altLink, description, videoSource, 
 						<strong>{title}</strong><br/>
 						<i>{date}</i><br/>
 						<a href={link} target="_blank" rel="noreferrer">{link}</a><br/>
-						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/></> : null}
+						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/><br/></> : null}
 						{description}
-						<iframe title={youtubeSource} src={`https://www.youtube.com/embed/${youtubeSource}?autoplay=1&mute=1&controls=0`}/>
+						<iframe title={youtubeSource} src={`https://www.youtube.com/embed/${youtubeSource}?autoplay=1&mute=1&controls=0&loop=1`}/>
 					</p>
 				</div>
 			</div>
@@ -81,7 +81,7 @@ function TimelineBox({ c, title, date, link, altLink, description, videoSource, 
 						<strong>{title}</strong><br/>
 						<i>{date}</i><br/>
 						<a href={link} target="_blank" rel="noreferrer">{link}</a><br/>
-						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/></> : null}
+						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/><br/></> : null}
 						{description}
 						<video width="320" height="240" autoPlay muted loop>
 							<source src={videoSource} type="video/webm"/>
@@ -100,7 +100,7 @@ function TimelineBox({ c, title, date, link, altLink, description, videoSource, 
 						<strong>{title}</strong><br/>
 						<i>{date}</i><br/>
 						<a href={link} target="_blank" rel="noreferrer">{link}</a><br/>
-						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/></> : null}
+						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/><br/></> : null}
 						{description}
 						<img src={imageSource} alt="Couldn't be rendered."/>
 					</p>
@@ -116,7 +116,7 @@ function TimelineBox({ c, title, date, link, altLink, description, videoSource, 
 						<strong>{title}</strong><br/>
 						<i>{date}</i><br/>
 						<a href={link} target="_blank" rel="noreferrer">{link}</a><br/>
-						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/></> : null}
+						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/><br/></> : null}
 						{description}
 					</p>
 				</div>

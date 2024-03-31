@@ -25,6 +25,13 @@ const Layout = () => {
 					</div>
 					<div
 						className="tab"
+						onClick={() => navigate("/timeline")}
+						onKeyDown={() => navigate("/timeline")}
+					>
+						<p>Timeline</p>
+					</div>
+					<div
+						className="tab"
 						onClick={() => navigate("/about")}
 						onKeyDown={() => navigate("/about")}
 					>
