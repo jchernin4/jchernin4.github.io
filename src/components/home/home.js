@@ -8,7 +8,7 @@ import "./home.css";
 const Home = () => (
 	<Page header="Home">
 		<div className="intro">
-			<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fasa-groundhandling.com%2Fwp-content%2Fuploads%2F2019%2F10%2Fplaceholder-person-square.png&f=1&nofb=1&ipt=7785b6e525bdae4731f21fefc5bec1fb78706f18a8ee3d94ef1f4edcfd62c6ca&ipo=images"/>
+			<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fasa-groundhandling.com%2Fwp-content%2Fuploads%2F2019%2F10%2Fplaceholder-person-square.png&f=1&nofb=1&ipt=7785b6e525bdae4731f21fefc5bec1fb78706f18a8ee3d94ef1f4edcfd62c6ca&ipo=images" alt="Blank pfp"/>
 			<p className="introtext">
 Hello! My name is Jeremy Chernin, I'm a student at The Pennsylvania State University pursing a bachelor's in Computer Science.
 
