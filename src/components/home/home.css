@@ -2,9 +2,12 @@
 	display: flex;
 	justify-self: center;
 	color: var(--text);
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	width: 60%;
+}
+
+.introtext {
+	margin: auto;
 }
 
 .skillscontainer {
@@ -16,4 +19,8 @@
 	grid-template-columns: auto auto auto auto auto auto;
 
 	padding: 10px;
+}
+
+.skilltitle {
+	color: var(--text);
 }

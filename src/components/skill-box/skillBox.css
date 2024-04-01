@@ -1,16 +1,21 @@
 .box {
-	border-width: 4px;
+	min-width: 150px;
+	min-height: 50px;
+	border-width: 2px;
 	border-style: solid;
 	border-color: var(--flamingo);
 	margin: auto;
-	padding: 20px;
+	padding: 5px;
 }
 
 .skillimage {
-	width: 200px;
-	height: 200px;
+	width: 50px;
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 0px;
 }
 
 .description {
 	color: var(--text);
+	margin: 5px;
 }

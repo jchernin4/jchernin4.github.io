@@ -16,57 +16,49 @@ I began programming back in November of 2014, when I created an account on a web
 			</p>
 		</div>
 
-		<h1>Languages</h1>
+		<h1 className="skilltitle">Languages</h1>
 
 		<div className="skillscontainer">
-			<SkillBox imageSource="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F198-1984828_java-icon-transparent-hd-png-download.png&f=1&nofb=1&ipt=e0d13090a87d8818676207feab4328e81d00e3f64164bece1550b9280a3ff5cb&ipo=images" description="Java"/>
-			<SkillBox imageSource="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic-00.iconduck.com%2Fassets.00%2Fcsharp-icon-1755x2048-5r3ugs1f.png&f=1&nofb=1&ipt=8aabdfbfde4562235a9a12f371f92980565bb706c02ff7a868f582b76d739d18&ipo=images" description="C#"/>
-			<SkillBox imageSource="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F694%2F533%2Fpng-transparent-the-c-programming-language-internet-explorer-miscellaneous-blue-cdr.png&f=1&nofb=1&ipt=543baef22e84b5bcfb04ecd2738199a50beeb4f3e98e90a89d67ea7e301f7285&ipo=images" description="C++"/>
-			<SkillBox imageSource="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.britefish.net%2Fwp-content%2Fuploads%2F2019%2F06%2Flogo-javascript-2.png&f=1&nofb=1&ipt=ed46c2924fe6aaf092e6a6d02a816d2e0986f1ac53a673442195e067429dc35b&ipo=images" description="Javascript"/>
-			<SkillBox imageSource="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fhtml5-logo-png%2Fhtml5-logo-file-html-shiny-icon-svg-wikimedia-commons-11.png&f=1&nofb=1&ipt=33ce704a0ad323a85d9a54595a722d9a7fe607cda4e5293b1119ea835d46fddb&ipo=images" description="HTML"/>
-			<SkillBox imageSource="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogospng.org%2Fdownload%2Fcss-3%2Flogo-css-3-2048.png&f=1&nofb=1&ipt=6447d769bf3bbe88d9bcf48c7e276b72da08edbab770c75ec889fa3b57c23b7b&ipo=images" description="CSS"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" description="Java"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" description="C#"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" description="C++"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" description="Javascript"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" description="HTML"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" description="CSS"/>
 		</div>
-		<p>
+		
+		<h1 className="skilltitle">Tools</h1>
 
-Some of the tools I've used:
+		<div className="skillscontainer">
+			<SkillBox imageSource="" description="Javalin"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" description="MongoDB"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" description="MySQL"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" description="React"/>
+			<SkillBox imageSource="" description="Discord JDA"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" description="Nginx"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" description="Apache"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" description="Gradle"/>
+			<SkillBox imageSource="" description="JavaFX + Swing"/>
+			<SkillBox imageSource="" description="WPF + Winforms"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" description="Selenium"/>
+			<SkillBox imageSource="" description="Fabric, Bukkit, and Forge"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" description="Unity"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" description="Blender"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetbrains/jetbrains-original.svg" description="JetBrains IDEs"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" description="Visual Studio IDEs"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg" description="NeoVim"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" description="Git + GitHub"/>
+		</div>
 
-    Languages: Java, C#, C++, JavaScript, HTML, CSS, PHP
-
-    Packages/Tools
-        Javalin - Java HTTP server
-        MongoDB and MySQL - Database
-        React - Component-based website building tool for JavaScript/HTML/CSS
-        Discord JDA - Java Discord API wrapper
-        Nginx and Apache - HTTP and reverse proxy server
-        Gradle - Java build tool
-        JavaFX/Swing JFrames - Java GUI
-        WPF - C# GUI
-        Selenium - Browser automation
-        FabricMC, Bukkit, and Forge - Minecraft mod development toolchain
-        Unity - Game engine
-        Blender - 3D modelling/animation
-        JetBrains IDEs (Rider, Intellij, CLion, WebStorm)
-        Visual Studio IDEs (VSCode, Visual Studio)
-        NeoVim - Text editor
-        Git/GitHub - Version control
-
-    Larger Concepts
-        APIs (creating my own and implementing others')
-        Networking
-            TCP/UDP protocols
-            HTTP protocol
-            Proxying
-            IRC
-            Routing over Tor network
-        Cybersecurity
-        Cryptocurrency
-        Databases
-        Game programming/hacking
-        OCR (image-to-text processing)
-        Web scraping
-        Task automation
-        Investment automation/analysis
-</p>
+		<h1 className="skilltitle">Concepts</h1>
+		
+		<div className="skillscontainer">
+			<SkillBox imageSource="" description="API creation and usage"/>
+			<SkillBox imageSource="" description="HTTP, UDP, TCP, IRC, Proxies"/>
+			<SkillBox imageSource="" description="OCR (image-to-text processing)"/>
+			<SkillBox imageSource="" description="Web scraping"/>
+			<SkillBox imageSource="" description="Investment automation"/>
+		</div>
 	</Page>
 );
 
