@@ -66,7 +66,7 @@ function TimelineBox({ c, title, date, link, altLink, description, videoSource, 
 						<a href={link} target="_blank" rel="noreferrer">{link}</a><br/>
 						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/><br/></> : null}
 						{description}
-						<iframe title={youtubeSource} src={`https://www.youtube.com/embed/${youtubeSource}?autoplay=1&mute=1&controls=0&loop=1`}/>
+						<iframe className="projectiframe" title={youtubeSource} src={`https://www.youtube.com/embed/${youtubeSource}?autoplay=1&mute=1&controls=0&loop=1`}/>
 					</p>
 				</div>
 			</div>
@@ -83,7 +83,7 @@ function TimelineBox({ c, title, date, link, altLink, description, videoSource, 
 						<a href={link} target="_blank" rel="noreferrer">{link}</a><br/>
 						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/><br/></> : null}
 						{description}
-						<video width="320" height="240" autoPlay muted loop>
+						<video className="projectvideo" width="320" height="240" autoPlay muted loop>
 							<source src={videoSource} type="video/webm"/>
 							Your browser does not support the video tag.
 						</video>
@@ -102,7 +102,7 @@ function TimelineBox({ c, title, date, link, altLink, description, videoSource, 
 						<a href={link} target="_blank" rel="noreferrer">{link}</a><br/>
 						{altLink !== null ? <><a href={altLink} target="_blank" rel="noreferrer">{altLink}</a><br/><br/></> : null}
 						{description}
-						<img src={imageSource} alt="Couldn't be rendered."/>
+						<img className="projectimg" src={imageSource} alt="Couldn't be rendered."/>
 					</p>
 				</div>
 			</div>
