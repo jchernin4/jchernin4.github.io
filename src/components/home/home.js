@@ -30,23 +30,23 @@ I began programming back in November of 2014, when I created an account on a web
 		<h1 className="skilltitle">Tools</h1>
 
 		<div className="skillscontainer">
-			<SkillBox imageSource="" description="Javalin"/>
+			<SkillBox imageSource="https://avatars.githubusercontent.com/u/28701086?s=200&v=4" description="Javalin"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" description="MongoDB"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" description="MySQL"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" description="React"/>
-			<SkillBox imageSource="" description="Discord JDA"/>
+			<SkillBox imageSource="https://raw.githubusercontent.com/discord-jda/JDA/assets/assets/readme/logo.png" description="Discord JDA"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" description="Nginx"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" description="Apache"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" description="Gradle"/>
-			<SkillBox imageSource="" description="Swing"/>
-			<SkillBox imageSource="" description="WPF"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" description="Swing"/>
+			<SkillBox imageSource="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpic4.zhimg.com%2F50%2Fv2-06f957e72756783fd7d73ff3e1b04a85_qhd.jpg&f=1&nofb=1&ipt=1b32cc047d3cba23a25bdde80203a2420552c346afb5ec900aa18aca0dea2bf9&ipo=images" description="WPF"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" description="Selenium"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" description="Unity"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" description="Blender"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetbrains/jetbrains-original.svg" description="JetBrains"/>
+			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" description="Git"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" description="Visual Studio"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg" description="NeoVim"/>
-			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" description="Git"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" description="GitHub"/>
 		</div>
 	</Page>

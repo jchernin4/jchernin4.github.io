@@ -18,11 +18,11 @@
 }
 
 :root {
-	--crust: #11111b;
-	--mantle: #181825;
+	--bg: #11111b;
+	--secondary-bg: #181825;
 	--base: #1e1e2e;
 	--surface: #313244;
-	--overlay: #9399b2;
+	--highlight: #9399b2;
 	--text: #cdd6f4;
 	--subtext: #bac2de;
 	--lavendar: #b4befe;

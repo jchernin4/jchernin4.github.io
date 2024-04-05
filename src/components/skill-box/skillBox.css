@@ -4,13 +4,13 @@
 	align-items: center;
 	justify-content: center;
 
-	min-width: 190px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: var(--flamingo);
-	background-color: var(--crust);
-	margin: 10px;
-	padding: 20px;
+	border-radius: 25px;
+	background-color: var(--bg);
+	margin: 3px;
+	padding: 10px 20px 10px 20px;
 }
 
 .skillimage {

@@ -3,7 +3,7 @@
 	/*position: fixed; Temporarily commenting this out, this is what makes it sticky but it won't stop hiding the start of the content*/
 	width: 100%;
 	top: 0px;
-	background-color: var(--mantle);
+	background-color: var(--secondary-bg);
 	z-index: 100;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .nav__cta {
-	background-color: var(--mantle);
+	background-color: var(--secondary-bg);
 	color: var(--text);
 	border: none;
 	border-radius: 4px;
