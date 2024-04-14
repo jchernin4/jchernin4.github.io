@@ -3,7 +3,7 @@ import './App.css';
 import React from "react";
 
 import Home from "./components/home";
-import TimelinePage from "./components/timeline-page";
+import Portfolio from "./components/portfolio";
 import Resume from "./components/resume";
 import Layout from "./components/layout";
 
@@ -17,7 +17,7 @@ function App() {
 				<Route path="/index.html" element={<Navigate to="/" />} />
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
-					<Route path="/timeline" element={<TimelinePage />} />
+					<Route path="/portfolio" element={<Portfolio />} />
 					<Route path="/resume" element={<Resume />} />
 				</Route>
 			</Routes>
