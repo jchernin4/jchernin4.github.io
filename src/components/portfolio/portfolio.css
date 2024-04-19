@@ -6,4 +6,7 @@
 	margin: 10px;
 	width: auto;
 	height: auto;
+
+	/*align-items: center;*/
+	justify-content: center;
 }

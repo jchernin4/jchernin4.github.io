@@ -22,7 +22,7 @@ function Portfolio() {
 				<PortfolioBox title="The Eden Project" date="May 2023" link="https://github.com/jchernin4/TheEdenProject" description="A singleplayer tower defense game where the player is stranded on a planet and must defend themselves from alien enemies and helicopters. They do this by placing turrents to defend their space station while managing different resources like power and iron to craft and upgrade more turrets."/>
 				<PortfolioBox title="Adlite" date="October 2023" link="https://github.com/jchernin4/AdLite" altLink="https://devpost.com/software/adlite" description="A submission to HackPSU Fall 2023, which won first place in both the Entrepreneurship and Best Use of Taipy categories. It provided an alternative advertisement solution to traditional ads by instead using a cryptocurrency miner to act as a less invasive option for those that prefer to not have a cluttered webpage." imageSource="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/635/760/datas/gallery.jpg"/>
 
-				<PortfolioBox title="AsciiJack" date="January 2024" link="https://github.com/jchernin4/asciijack" description="A console-based blackjack game."/>
+				<PortfolioBox title="AsciiJack" date="January 2024" link="https://github.com/jchernin4/asciijack" description="A console-based blackjack game." imageSource="asciijack.png"/>
 			</div>
 		</Page>
 	);
