@@ -1,7 +1,9 @@
+import "./portfolioBox.css";
+
 function PortfolioBox({ title, date, link, altLink, description, videoSource, youtubeSource, imageSource }) {
 	if (youtubeSource != null) {
 		return (
-			<div className={`container`}>
+			<div className="container">
 				<div className="content">
 					<p>
 						<strong>{title}</strong><br/>
@@ -18,7 +20,7 @@ function PortfolioBox({ title, date, link, altLink, description, videoSource, yo
 
 	} else if (videoSource != null) {
 		return (
-			<div className={`container`}>
+			<div className="container">
 				<div className="content">
 					<p>
 						<strong>{title}</strong><br/>
@@ -37,7 +39,7 @@ function PortfolioBox({ title, date, link, altLink, description, videoSource, yo
 
 	} else if (imageSource != null) {
 		return (
-			<div className={`container`}>
+			<div className="container">
 				<div className="content">
 					<p>
 						<strong>{title}</strong><br/>
@@ -53,7 +55,7 @@ function PortfolioBox({ title, date, link, altLink, description, videoSource, yo
 
 	} else {
 		return (
-			<div className={`container}`}>
+			<div className="container">
 				<div className="content">
 					<p>
 						<strong>{title}</strong><br/>
