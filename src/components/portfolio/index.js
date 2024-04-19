@@ -1,1 +1,1 @@
-export { default } from "./portfolio.js";
+export { default } from "./portfolio.js"
