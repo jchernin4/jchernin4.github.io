@@ -8,11 +8,11 @@ import "./home.css";
 const Home = () => (
 	<Page header="Home">
 		<div className="intro">
-			<img className="pfp" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fasa-groundhandling.com%2Fwp-content%2Fuploads%2F2019%2F10%2Fplaceholder-person-square.png&f=1&nofb=1&ipt=7785b6e525bdae4731f21fefc5bec1fb78706f18a8ee3d94ef1f4edcfd62c6ca&ipo=images" alt="Blank pfp"/>
+			<p className="introtitle">
+				Jeremy Chernin
+			</p>
 			<p className="introtext">
-Hello! My name is Jeremy Chernin, I'm a student at The Pennsylvania State University pursing a bachelor's in Computer Science.
-
-I began programming back in November of 2014, when I created an account on a website called Scratch in the 5th grade. Although this was a relatively simple way of coding, it sparked my interest and caused me to branch out into learning JavaScript, specifically Node.js. From there, I learned Java, which I used for a long time to explore a bunch of different topics. The transition to C# was very easy since I was already familiar with Java, and that also helped with learning C++, which I learned shortly after.
+				Software developer and rising junior at The Pennsylvania State University pursing a bachelor's in Computer Science.
 			</p>
 		</div>
 

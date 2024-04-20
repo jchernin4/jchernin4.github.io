@@ -1,13 +1,20 @@
 .intro {
 	display: flex;
+	flex-direction: column;
 	justify-self: center;
 	color: var(--text);
 	margin: auto;
 	width: 60%;
 }
 
+.introtitle {
+	font-size: 6em;
+	margin: 5px;
+}
+
 .introtext {
-	margin: auto;
+	font-size: 1.5em;
+	margin: 50px;
 }
 
 .pfp {
