@@ -1,9 +1,9 @@
 .container {
-	border: 2px solid var(--lavendar);
+	border: 2px solid var(--accent-1);
 	padding: 10px;
 	margin: 10px;
 	width: 500px;
-	background-color: var(--surface);
+	background-color: var(--secondary-bg);
 	color: var(--text);
 }
 

@@ -1,6 +1,13 @@
+html, body {
+	height: 100%;
+}
+
+
 .App {
 	text-align: center;
-	background-color: var(--base);
+	background-color: var(--bg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .App-header {
@@ -19,13 +26,9 @@
 }
 
 :root {
-	--bg: #11111b;
-	--secondary-bg: #181825;
-	--base: #1e1e2e;
-	--surface: #313244;
-	--highlight: #9399b2;
-	--text: #cdd6f4;
-	--subtext: #bac2de;
-	--lavendar: #b4befe;
-	--flamingo: #f2cdcd;
+	--bg: #0C0C0C;
+	--secondary-bg: #151515;
+	--text: #F7F7FF;
+	--accent-1: #8A817C;
+	--accent-2: #6E44FF;
 }

@@ -3,7 +3,6 @@
 	/*position: fixed; Temporarily commenting this out, this is what makes it sticky but it won't stop hiding the start of the content*/
 	width: 100%;
 	top: 0px;
-	background-color: var(--secondary-bg);
 	z-index: 100;
 }
 
@@ -19,7 +18,7 @@
 
 .logo {
 	text-decoration: none;
-	color: var(--flamingo);
+	color: var(--text);
 	transition: color 0.4s;
 	font-size: 1.25rem;
 	/*font-family: var(--second-font);*/
@@ -28,7 +27,7 @@
 .nav__toggle,
 .nav__close {
 	font-size: 1.5rem;
-	color: var(--flamingo);
+	color: var(--accent-1);
 	cursor: pointer;
 }
 
@@ -66,7 +65,7 @@
 }
 
 .navlink:hover {
-	color: var(--flamingo);
+	color: var(--accent-1);
 }
 
 .nav__close {
