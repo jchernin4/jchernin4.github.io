@@ -11,3 +11,11 @@
 	/*align-items: center;*/
 	justify-content: center;
 }
+
+.title {
+	color: var(--text);
+}
+
+.description {
+	color: var(--text);
+}
