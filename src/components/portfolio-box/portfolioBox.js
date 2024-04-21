@@ -1,8 +1,9 @@
 import "./portfolioBox.css";
 
-function PortfolioBox({ title, date, link, altLink, description, imageSource }) {
+function PortfolioBox({ expand, onShow, title, date, link, altLink, description, imageSource }) {
 	return (
-		<div className="container">
+		<div className={ expand ? "container expand" : "container" }
+			onMouseEnter={onShow}>
 			<img className="projectimg" src={imageSource} alt="Couldn't be rendered."/>
 		</div>
 	);
