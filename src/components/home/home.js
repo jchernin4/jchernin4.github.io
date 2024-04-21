@@ -10,12 +10,14 @@ import "./home.css";
 const Home = () => (
 	<Page header="Home">
 		<div className="intro">
-			<p className="introtitle">
-				Jeremy Chernin
-			</p>
-			<p className="introtext">
-				Software developer and rising junior at The Pennsylvania State University pursing a bachelor's in Computer Science.
-			</p>
+			<div className="introContainer">
+				<p className="introtitle">
+					Jeremy Chernin
+				</p>
+				<p className="introtext">
+					Software developer and rising junior at The Pennsylvania State University pursing a bachelor's in Computer Science.
+				</p>
+			</div>
 		</div>
 
 		<h1 className="skilltitle">Languages</h1>
