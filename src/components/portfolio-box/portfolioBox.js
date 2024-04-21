@@ -1,6 +1,6 @@
 import "./portfolioBox.css";
 
-function PortfolioBox({ expand, onShow, handleChange, date, link, altLink, imageSource }) {
+function PortfolioBox({ expand, onShow, handleChange, imageSource }) {
 	return (
 		<div className={ expand ? "container expand" : "container" }
 			onMouseEnter={onShow}>

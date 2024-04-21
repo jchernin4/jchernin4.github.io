@@ -16,6 +16,10 @@
 	color: var(--text);
 }
 
+.date {
+	color: var(--text);
+}
+
 .description {
 	color: var(--text);
 }

@@ -3,6 +3,8 @@ import React from "react";
 import Page from "../page";
 import SkillBox from "../skill-box";
 
+import Portfolio from "../portfolio";
+
 import "./home.css";
 
 const Home = () => (
@@ -49,6 +51,8 @@ const Home = () => (
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg" description="NeoVim"/>
 			<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" description="GitHub"/>
 		</div>
+
+		<Portfolio/>
 	</Page>
 );
 
