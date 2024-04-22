@@ -34,8 +34,8 @@ function Portfolio() {
 			<div>
 				<p className="title">{title}</p>
 				<p className="date">{date}</p>
-				<a className="link" href={link}>{link}</a><br/>
-				<a className="altLink" href={altLink}>{altLink}</a>
+				<a className="link" href={link} target="_blank" rel="noreferrer">{link}</a><br/>
+				<a className="altLink" href={altLink} target="_blank" rel="noreferrer">{altLink}</a>
 				<p className="description">{description}</p>
 			</div>
 		</Page>
