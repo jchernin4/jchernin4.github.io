@@ -1,6 +1,7 @@
 .header {
 	overflow: hidden;
-	/*position: fixed; Temporarily commenting this out, this is what makes it sticky but it won't stop hiding the start of the content*/
+	position: fixed;
+	/*background-color: var(--bg);*/
 	width: 100%;
 	top: 0px;
 	z-index: 100;
@@ -21,7 +22,6 @@
 	color: var(--text);
 	transition: color 0.4s;
 	font-size: 1.25rem;
-	/*font-family: var(--second-font);*/
 }
 
 .nav__toggle,

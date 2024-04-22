@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import PortfolioBox from "../portfolio-box";
 
@@ -13,10 +13,20 @@ function Portfolio() {
 	const [link, setLink] = useState("");
 	const [altLink, setAltLink] = useState("");
 
+	const ref = useRef(null);
+
+  	useEffect(() => {
+		const element = ref.current;
+		console.log(element);
+		element.onMouseEnter();
+		return;
+
+  	}, []);
+
 	return (
 		<div className="portfolio">
 			<div className="gallery">
-				<PortfolioBox expand={activeIndex === 0} onShow={() => {setActiveIndex(0); setTitle("Poseidon"); setDate("January 2019"); setDescription("A tool for Discord to automate tasks for administrators, along with some miscellaneous commands. Used by over 100,000 people at it's peak."); setLink("https://github.com/jchernin4/Poseidon"); setAltLink("");}}/>
+				<PortfolioBox ref={ref} expand={activeIndex === 0} onShow={() => {setActiveIndex(0); setTitle("Poseidon"); setDate("January 2019"); setDescription("A tool for Discord to automate tasks for administrators, along with some miscellaneous commands. Used by over 100,000 people at it's peak."); setLink("https://github.com/jchernin4/Poseidon"); setAltLink("");}}/>
 				<PortfolioBox expand={activeIndex === 1} onShow={() => {setActiveIndex(1); setTitle("Econ"); setDate("April 2021"); setDescription('Another Discord economy bot, but this one was a lot more advanced. It allowed users to "invest" their currency into stocks, which followed real life stock market prices through an algorithm that combined different assets into a made-up one that players could purchase. It also allowed players to gamble their money with games like "roulette" and "coinflip".'); setLink("https://github.com/jchernin4/Econ"); setAltLink("");}}/>
 				<PortfolioBox expand={activeIndex === 2} onShow={() => {setActiveIndex(2); setTitle("Project Zero"); setDate("May 2022"); setDescription("A game similar to the game Ravenfield. The player is in control of a large army of AI-controlled soliders, and must capture areas of interest in order to earn points. The twist was that the player could control where the AI bots move to by selecting them on a map and clicking on a point that they want to control. It was meant to be a multiplayer game, but was never finished."); setLink("https://github.com/jchernin4/Project-Zero"); setAltLink("");}}/>
 				<PortfolioBox expand={activeIndex === 3} onShow={() => {setActiveIndex(3); setTitle("GreenSolve"); setDate("November 2022"); setDescription("A submission for HackPSU 2022, which won in two categories: Sustainability and Most Creative Use of Twilio. This application was focused on connecting people in the same area to work together on green projects such as park cleanups and community gardens by allowing organizers to send out a text message notification about an event to all users that are registered in the same zip code."); setLink("https://github.com/jchernin4/GreenSolve-HackPSU2022"); setAltLink("https://devpost.com/software/greensolve");}} imageSource="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/285/107/datas/gallery.jpg"/>
