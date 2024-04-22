@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import Page from "../page";
 import PortfolioBox from "../portfolio-box";
 
 import "./portfolio.css";
@@ -15,7 +14,7 @@ function Portfolio() {
 	const [altLink, setAltLink] = useState("");
 
 	return (
-		<Page header="Portfolio">
+		<div className="portfolio">
 			<div className="gallery">
 				<PortfolioBox expand={activeIndex === 0} onShow={() => {setActiveIndex(0); setTitle("Poseidon"); setDate("January 2019"); setDescription("A tool for Discord to automate tasks for administrators, along with some miscellaneous commands. Used by over 100,000 people at it's peak."); setLink("https://github.com/jchernin4/Poseidon"); setAltLink("");}}/>
 				<PortfolioBox expand={activeIndex === 1} onShow={() => {setActiveIndex(1); setTitle("Econ"); setDate("April 2021"); setDescription('Another Discord economy bot, but this one was a lot more advanced. It allowed users to "invest" their currency into stocks, which followed real life stock market prices through an algorithm that combined different assets into a made-up one that players could purchase. It also allowed players to gamble their money with games like "roulette" and "coinflip".'); setLink("https://github.com/jchernin4/Econ"); setAltLink("");}}/>
@@ -30,14 +29,14 @@ function Portfolio() {
 				<PortfolioBox expand={activeIndex === 11} onShow={() => {setActiveIndex(11); setTitle("AsciiJack"); setDate("January 2024"); setDescription("A console-based blackjack game."); setLink("https://github.com/jchernin4/asciijack"); setAltLink("");}} imageSource="asciijack.png"/>
 			</div>
 
-			<div>
+			<div className="projectInfo">
 				<p className="title">{title}</p>
 				<p className="date">{date}</p>
 				<a className="link" href={link} target="_blank" rel="noreferrer">{link}</a><br/>
 				<a className="altLink" href={altLink} target="_blank" rel="noreferrer">{altLink}</a>
-				<p className="description">{description}</p>
+				<p className="projectDescription">{description}</p>
 			</div>
-		</Page>
+		</div>
 	);
 };
 

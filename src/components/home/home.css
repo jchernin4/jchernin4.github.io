@@ -23,12 +23,12 @@
 	color: var(--text);
 }
 
-.introtitle {
+.introTitle {
 	font-size: 6em;
 	margin: 5px;
 }
 
-.introtext {
+.introText {
 	font-size: 1.5em;
 	margin: 50px;
 }
@@ -38,7 +38,7 @@
 	width: 200px;
 }
 
-.skillscontainer {
+.skillsContainer {
 	display: flex;
 	flex-flow: row wrap;
 	width: 50%;
@@ -51,6 +51,6 @@
 	border-radius: 20px;
 }
 
-.skilltitle {
+.skillTitle {
 	color: var(--text);
 }

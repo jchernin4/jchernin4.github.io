@@ -1,10 +1,14 @@
+.portfolio {
+	width: 100%;
+}
+
 .gallery {
 	display: flex;
 	flex-direction: row;
 
 	flex-wrap: wrap;
 
-	width: auto;
+	width: 100%;
 	height: auto;
 
 	/*align-items: center;*/
@@ -12,13 +16,30 @@
 }
 
 .title {
+	font-size: 50px;
+	margin: 10px 10px 5px 10px;
 	color: var(--text);
 }
 
 .date {
+	margin: 5px;
 	color: var(--text);
 }
 
-.description {
+.link, .altLink {
 	color: var(--text);
+	margin: 5px;
+}
+
+.projectDescription {
+	color: var(--text);
+	margin: 20px 90px 10px 90px;
+}
+
+.projectInfo {
+	background-color: var(--secondary-bg);
+	padding: 10px;
+	margin: 50px 500px;
+	border-radius: 5px;
+	min-height: 300px;
 }

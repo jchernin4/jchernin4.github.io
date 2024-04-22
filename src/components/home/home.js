@@ -11,20 +11,16 @@ const Home = () => (
 	<Page header="Home">
 		<div className="sectionContainer">
 			<div className="introContainer">
-				<p className="introtitle">
-					Jeremy Chernin
-				</p>
-				<p className="introtext">
-					Software developer and rising junior at The Pennsylvania State University pursing a bachelor's in Computer Science.
-				</p>
+				<p className="introTitle">Jeremy Chernin</p>
+				<p className="introText">Software developer and rising junior at The Pennsylvania State University pursing a bachelor's in Computer Science.</p>
 			</div>
 		</div>
 
 
 		<div className="sectionContainer">
-			<h1 className="skilltitle">Languages</h1>
+			<h1 className="skillTitle">Languages</h1>
 
-			<div className="skillscontainer">
+			<div className="skillsContainer">
 				<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" description="Java"/>
 				<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" description="C#"/>
 				<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" description="C++"/>
@@ -33,9 +29,9 @@ const Home = () => (
 				<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" description="CSS"/>
 			</div>
 
-			<h1 className="skilltitle">Tools</h1>
+			<h1 className="skillTitle">Tools</h1>
 
-			<div className="skillscontainer">
+			<div className="skillsContainer">
 				<SkillBox imageSource="https://avatars.githubusercontent.com/u/28701086?s=200&v=4" description="Javalin"/>
 				<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" description="MongoDB"/>
 				<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" description="MySQL"/>
