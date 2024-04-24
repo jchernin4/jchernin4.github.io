@@ -22,6 +22,10 @@
 	color: var(--text);
 }
 
+.spacer {
+	height: 25vh;
+}
+
 .introTitle {
 	font-size: 6em;
 	margin: 5px;

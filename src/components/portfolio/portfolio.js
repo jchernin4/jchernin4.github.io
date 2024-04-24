@@ -32,6 +32,8 @@ function Portfolio() {
 
 	return (
 		<div className="portfolio">
+			<p className="title">Projects</p>
+
 			<div className="gallery">
 				<PortfolioBox expand={activeIndex === 0} onShow={() => {setActiveIndex(0); setTitle("Poseidon"); setDate("January 2019"); setDescription("A tool for Discord to automate tasks for administrators, along with some miscellaneous commands. Used by over 100,000 people at it's peak."); setLink("https://github.com/jchernin4/Poseidon"); setAltLink("");}}/>
 				<PortfolioBox expand={activeIndex === 2} onShow={() => {setActiveIndex(2); setTitle("Project Zero"); setDate("May 2022"); setDescription("A game similar to the game Ravenfield. The player is in control of a large army of AI-controlled soliders, and must capture areas of interest in order to earn points. The twist was that the player could control where the AI bots move to by selecting them on a map and clicking on a point that they want to control. It was meant to be a multiplayer game, but was never finished."); setLink("https://github.com/jchernin4/Project-Zero"); setAltLink("");}}/>
@@ -46,7 +48,7 @@ function Portfolio() {
 			</div>
 
 			<div className="projectInfo">
-				<p className="title">{title}</p>
+				<p className="projectTitle">{title}</p>
 				<p className="date">{date}</p>
 				<a className="link" href={link} target="_blank" rel="noreferrer">{link}</a><br/>
 				<a className="altLink" href={altLink} target="_blank" rel="noreferrer">{altLink}</a>

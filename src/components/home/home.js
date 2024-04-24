@@ -21,6 +21,9 @@ const Home = () => (
 			<Skills/>
 		</div>
 
+		<div className="spacer"/>
+		<div className="spacer"/>
+
 		<div className="sectionContainer">
 			<Portfolio/>
 		</div>
