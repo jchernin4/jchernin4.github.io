@@ -1,0 +1,16 @@
+.skillsContainer {
+	display: flex;
+	flex-flow: row wrap;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+
+	padding: 10px;
+
+	background-color: var(--secondary-bg);
+	border-radius: 20px;
+}
+
+.skillTitle {
+	color: var(--text);
+}
