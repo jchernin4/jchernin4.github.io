@@ -3,6 +3,7 @@ import React from "react";
 import Page from "../page";
 
 import Skills from "../skills";
+import Experience from "../experience";
 import Portfolio from "../portfolio";
 
 import "./home.css";
@@ -23,6 +24,10 @@ const Home = () => (
 
 		<div className="spacer"/>
 		<div className="spacer"/>
+
+		<div className="sectionContainer">
+			<Experience/>
+		</div>
 
 		<div className="sectionContainer">
 			<Portfolio/>
