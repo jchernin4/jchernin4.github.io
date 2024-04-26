@@ -1,11 +1,9 @@
-import "./experience.css";
+import ExperienceBox from "../experience-box";
 
 function Experience() {
 	return (
-		<div className="experienceBox">
-			<p className="experiencePosition">Intern</p>
-			<p className="experienceTitle">Quench Water</p>
-			<p className="experienceDate">June-August 2024</p>
+		<div className="experienceContainer">
+			<ExperienceBox position="Intern" company="Quench Water" date="June-August 2024" description="This is a test description"/>
 		</div>
 	);
 }
