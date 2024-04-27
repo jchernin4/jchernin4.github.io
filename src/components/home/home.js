@@ -10,6 +10,9 @@ import "./home.css";
 
 const Home = () => (
 	<Page header="Home">
+		<video width="1000" height="1000" preload loop autoPlay muted playsinline>
+			<source src="Earth.webm" type="video/webm"/>
+		</video>
 		<div className="sectionContainer">
 			<div className="introContainer">
 				<p className="introTitle">Jeremy Chernin</p>
