@@ -1,0 +1,24 @@
+.experienceBox {
+	display: flex;
+	flex-direction: row;
+
+	align-items: center;
+
+	background-color: var(--accent-2);
+}
+
+.experienceDescriptionBox {
+	min-height: 500px;
+	background-color: var(--secondary-bg);
+}
+
+.experienceBox, .experienceDescriptionBox {
+	padding: 10px;
+	min-width: 1200px;
+	margin: 0px;
+}
+
+.experienceTitle {
+	margin: 10px;
+	font-size: 30px;
+}

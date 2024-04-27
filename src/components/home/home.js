@@ -26,11 +26,13 @@ const Home = () => (
 		</div>
 
 		<div className="spacer"/>
-		<div className="spacer"/>
 
 		<div className="sectionContainer">
 			<Experience/>
 		</div>
+
+		<div className="spacer"/>
+		<div className="spacer"/>
 
 		<div className="sectionContainer">
 			<Portfolio/>

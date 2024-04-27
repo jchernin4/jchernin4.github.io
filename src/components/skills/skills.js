@@ -5,7 +5,7 @@ import "./skills.css";
 function Skills()  {
 	return (
 		<div>
-			<h1 className="skillTitle">Languages</h1>
+			<p className="skillTitle">Languages</p>
 
 			<div className="skillsContainer">
 				<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" description="Java"/>
@@ -16,7 +16,7 @@ function Skills()  {
 				<SkillBox imageSource="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" description="CSS"/>
 			</div>
 
-			<h1 className="skillTitle">Tools</h1>
+			<p className="skillTitle">Tools</p>
 
 			<div className="skillsContainer">
 				<SkillBox imageSource="https://avatars.githubusercontent.com/u/28701086?s=200&v=4" description="Javalin"/>
