@@ -5,15 +5,16 @@
 	align-items: center;
 
 	background-color: var(--accent-2);
+	padding: 10px;
 }
 
 .experienceDescriptionBox {
-	min-height: 500px;
+	min-height: 200px;
 	background-color: var(--secondary-bg);
+	padding: 10px 20px;
 }
 
 .experienceBox, .experienceDescriptionBox {
-	padding: 10px;
 	min-width: 1200px;
 	margin: 0px;
 }
@@ -21,4 +22,8 @@
 .experienceTitle {
 	margin: 10px;
 	font-size: 30px;
+}
+
+.experienceContainer {
+	margin: 5px 150px;
 }
