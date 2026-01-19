@@ -3,10 +3,11 @@
 import ProjectCard from "@/components/project-card/projectCard";
 import Skills from "@/components/skills/Skills";
 import ProjectCarousel from "@/components/project-carousel/ProjectCarousel";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [showScrollTop, setShowScrollTop] = useState(false);
 
     const navLinks = [
         { href: "#home", label: "Home" },
@@ -19,6 +20,20 @@ export default function Home() {
     const handleNavClick = () => {
         setIsMobileMenuOpen(false);
     };
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Show button when page is scrolled down
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <>
@@ -94,7 +109,7 @@ export default function Home() {
                     </a>
                 </section>
 
-                <section id="about" className="flex flex-col justify-center w-full max-w-4xl min-h-screen">
+                <section id="about" className="flex flex-col justify-center w-full max-w-4xl min-h-screen py-20">
                     <h1 className="text-4xl sm:text-5xl lg:text-7xl">About Me</h1>
                     <p className="text-lg sm:text-xl">Hello! I&apos;m Jeremy, a student and software developer from the Greater
                         Philadelphia area, Pennsylvania. I&apos;ve been passionate about programming since 2014,
@@ -224,6 +239,19 @@ export default function Home() {
                     </div>
                 </section>
             </main>
+
+            {/* Scroll to Top Button */}
+            <button
+                onClick={scrollToTop}
+                className={`fixed bottom-8 right-8 z-50 p-4 bg-stone-900 dark:bg-stone-50 text-stone-50 dark:text-stone-900 rounded-full shadow-lg hover:bg-stone-700 dark:hover:bg-stone-200 transition-all duration-300 hover:scale-110 ${
+                    showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16 pointer-events-none'
+                }`}
+                aria-label="Scroll to top"
+            >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+            </button>
         </>
     );
 }
