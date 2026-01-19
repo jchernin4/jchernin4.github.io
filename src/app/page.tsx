@@ -100,7 +100,7 @@ export default function Home() {
                     <h1 className="text-4xl sm:text-5xl lg:text-7xl text-stone-50 text-center">Jeremy Chernin</h1>
                     <h2 className="text-lg sm:text-xl text-stone-400 text-center">Computer Science Student at Penn State University</h2>
                     <a
-                        href="#"
+                        href="/Jeremy Chernin - Master Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-6 px-6 py-3 bg-stone-900 dark:bg-stone-50 text-stone-50 dark:text-stone-900 rounded-lg font-medium hover:bg-stone-700 dark:hover:bg-stone-200 transition-colors"
