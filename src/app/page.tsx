@@ -1,8 +1,25 @@
+"use client";
+
 import ProjectCard from "@/components/project-card/projectCard";
 import Skills from "@/components/skills/Skills";
 import ProjectCarousel from "@/components/project-carousel/ProjectCarousel";
+import { useState } from "react";
 
 export default function Home() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const navLinks = [
+        { href: "#home", label: "Home" },
+        { href: "#about", label: "About" },
+        { href: "#skills", label: "Skills" },
+        { href: "#experience", label: "Experience" },
+        { href: "#projects", label: "Projects" },
+    ];
+
+    const handleNavClick = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <>
             <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-stone-50/80 dark:bg-stone-950/80 border-b border-stone-200 dark:border-stone-800">
@@ -11,24 +28,55 @@ export default function Home() {
                         <a href="#home" className="text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-stone-600 dark:hover:text-stone-300 transition-colors">
                             Jeremy Chernin
                         </a>
-                        <div className="flex gap-6 sm:gap-8">
-                            <a href="#home" className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors">
-                                Home
-                            </a>
-                            <a href="#about" className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors">
-                                About
-                            </a>
-                            <a href="#skills" className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors">
-                                Skills
-                            </a>
-                            <a href="#experience" className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors">
-                                Experience
-                            </a>
-                            <a href="#projects" className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors">
-                                Projects
-                            </a>
-                            </div>
+
+                        {/* Desktop Navigation */}
+                        <div className="hidden md:flex gap-6 lg:gap-8">
+                            {navLinks.map((link) => (
+                                <a
+                                    key={link.href}
+                                    href={link.href}
+                                    className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors"
+                                >
+                                    {link.label}
+                                </a>
+                            ))}
+                        </div>
+
+                        {/* Mobile Hamburger Button */}
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="md:hidden p-2 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors"
+                            aria-label="Toggle menu"
+                        >
+                            {isMobileMenuOpen ? (
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            )}
+                        </button>
                     </div>
+
+                    {/* Mobile Menu */}
+                    {isMobileMenuOpen && (
+                        <div className="md:hidden pb-4">
+                            <div className="flex flex-col gap-4">
+                                {navLinks.map((link) => (
+                                    <a
+                                        key={link.href}
+                                        href={link.href}
+                                        onClick={handleNavClick}
+                                        className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </nav>
 
@@ -113,7 +161,7 @@ export default function Home() {
                             title: "AsciiJack",
                             startDate: "January 2024",
                             endDate: "January 2024",
-                            link: "https://github.com/jchernin4/asciijack",
+                            githubLink: "https://github.com/jchernin4/asciijack",
                             image: "/asciijack.png",
                             description: "A console-based blackjack game.",
                             techStack: ["Java"]
@@ -130,7 +178,7 @@ export default function Home() {
                             title: "Math Maze",
                             startDate: "February 2023",
                             endDate: "February 2023",
-                            link: "https://github.com/jchernin4/RIT-Brickhack",
+                            githubLink: "https://github.com/jchernin4/RIT-Brickhack",
                             image: "https://placehold.co/800x400/e7e5e4/57534e?text=Math+Maze",
                             description: "A submission for RIT's Brickhack hackathon. It is a multiplayer game made in Unity, which let players compete to solve math problems before the other player.",
                             techStack: ["Unity", "C#", "Blender", "Mirror"]
@@ -152,7 +200,8 @@ export default function Home() {
                             startDate="October 2023"
                             endDate="HackPSU"
                             title="AdLite"
-                            link="https://github.com/jchernin4/AdLite"
+                            link="https://devpost.com/software/adlite"
+                            githubLink="https://github.com/jchernin4/AdLite"
                             description="1st Place - Entrepreneurship and Best Use of Taipy. It provided an alternative advertisement solution to traditional ads by instead using a cryptocurrency miner to act as a less invasive option for those that prefer to not have a cluttered webpage."
                             techStack={["Python", "Taipy", "Cryptocurrency"]}
                         />
@@ -161,7 +210,8 @@ export default function Home() {
                             startDate="Spring 2023"
                             endDate="HackPSU"
                             title="GreenSolve"
-                            link="https://github.com/jchernin4/GreenSolve-HackPSU2022"
+                            link="https://devpost.com/software/mathmaze"
+                            githubLink="https://github.com/jchernin4/GreenSolve-HackPSU2022"
                             description="1st Place - Sustainability and Most Creative Use of Twilio. Developed a website that shares local green projects to promote environmental awareness."
                             techStack={["Twilio", "Web Development"]}
                         />
