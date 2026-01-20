@@ -112,7 +112,7 @@ function SkillItem({ name, icon }: { name: string; icon: string | null }) {
     );
 }
 
-export default function Skills() {
+export default function SkillsSection() {
     const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
 
     return (
