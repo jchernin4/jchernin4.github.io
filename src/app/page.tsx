@@ -55,7 +55,7 @@ export default function Home() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                                     </svg>
                                 </div>
-                                <span className="text-sm font-semibold text-stone-900 dark:text-stone-50 hidden sm:block">
+                                <span className="text-sm font-semibold text-stone-900 dark:text-stone-50">
                                     Jeremy Chernin
                                 </span>
                             </a>
