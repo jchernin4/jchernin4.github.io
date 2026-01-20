@@ -4,11 +4,13 @@ import ProjectCard from "@/components/project-card/projectCard";
 import Skills from "@/components/skills/Skills";
 import ProjectCarousel from "@/components/project-carousel/ProjectCarousel";
 import ThemeToggle from "@/components/theme-toggle/ThemeToggle";
+import InteractiveBackground from "@/components/interactive-background/InteractiveBackground";
 import { useState, useEffect } from "react";
 
 export default function Home() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [showScrollTop, setShowScrollTop] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     const navLinks = [
         { href: "#home", label: "Home" },
@@ -28,6 +30,7 @@ export default function Home() {
 
     // Show button when page is scrolled down
     useEffect(() => {
+        setMounted(true);
         const handleScroll = () => {
             setShowScrollTop(window.scrollY > 300);
         };
@@ -38,62 +41,78 @@ export default function Home() {
 
     return (
         <>
-            <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-stone-50/80 dark:bg-stone-950/80 border-b border-stone-200 dark:border-stone-800">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-16">
-                        <a href="#home" className="text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-stone-600 dark:hover:text-stone-300 transition-colors">
-                            Jeremy Chernin
-                        </a>
+            {/* Interactive Background */}
+            <InteractiveBackground />
 
-                        {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center gap-6 lg:gap-8">
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.href}
-                                    href={link.href}
-                                    className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors"
-                                >
-                                    {link.label}
-                                </a>
-                            ))}
-                            <ThemeToggle />
-                        </div>
+            <nav className="fixed top-0 left-0 right-0 z-50">
+                <div className="mx-4 sm:mx-6 lg:mx-8 mt-4">
+                    <div className="max-w-5xl mx-auto px-6 py-3 rounded-full backdrop-blur-md bg-white/70 dark:bg-stone-900/70 border border-stone-200/50 dark:border-stone-700/50 shadow-lg shadow-stone-900/5 dark:shadow-stone-900/20">
+                        <div className="flex items-center justify-between">
+                            {/* Logo */}
+                            <a href="#home" className="group flex items-center gap-2">
+                                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-md shadow-orange-500/20 group-hover:shadow-orange-500/40 transition-shadow">
+                                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                    </svg>
+                                </div>
+                                <span className="text-sm font-semibold text-stone-900 dark:text-stone-50 hidden sm:block">
+                                    Jeremy Chernin
+                                </span>
+                            </a>
 
-                        {/* Mobile Hamburger Button */}
-                        <button
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="md:hidden p-2 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors"
-                            aria-label="Toggle menu"
-                        >
-                            {isMobileMenuOpen ? (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            ) : (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
-                            )}
-                        </button>
-                    </div>
-
-                    {/* Mobile Menu */}
-                    {isMobileMenuOpen && (
-                        <div className="md:hidden pb-4">
-                            <div className="flex flex-col gap-4">
+                            {/* Desktop Navigation */}
+                            <div className="hidden md:flex items-center gap-1">
                                 {navLinks.map((link) => (
                                     <a
                                         key={link.href}
                                         href={link.href}
-                                        onClick={handleNavClick}
-                                        className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors"
+                                        className="px-4 py-2 text-sm font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-all"
                                     >
                                         {link.label}
                                     </a>
                                 ))}
-                                <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
-                                    <span>Theme</span>
-                                    <ThemeToggle />
+                                <div className="w-px h-6 bg-stone-200 dark:bg-stone-700 mx-2" />
+                                <ThemeToggle />
+                            </div>
+
+                            {/* Mobile Hamburger Button */}
+                            <button
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                className="md:hidden p-2 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-all"
+                                aria-label="Toggle menu"
+                            >
+                                {isMobileMenuOpen ? (
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                ) : (
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                )}
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Mobile Menu */}
+                    {isMobileMenuOpen && (
+                        <div className="md:hidden mt-2 max-w-5xl mx-auto">
+                            <div className="px-4 py-4 rounded-2xl backdrop-blur-md bg-white/70 dark:bg-stone-900/70 border border-stone-200/50 dark:border-stone-700/50 shadow-lg">
+                                <div className="flex flex-col gap-1">
+                                    {navLinks.map((link) => (
+                                        <a
+                                            key={link.href}
+                                            href={link.href}
+                                            onClick={handleNavClick}
+                                            className="px-4 py-3 text-sm font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-xl transition-all"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                    <div className="flex items-center justify-between px-4 py-3 mt-2 border-t border-stone-200 dark:border-stone-700">
+                                        <span className="text-sm text-stone-500 dark:text-stone-400">Theme</span>
+                                        <ThemeToggle />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -101,55 +120,183 @@ export default function Home() {
                 </div>
             </nav>
 
-            <main className="flex flex-col items-center min-h-screen bg-stone-50 font-sans dark:bg-stone-950 px-4 sm:px-6 lg:px-8">
-                <section id="home" className="flex flex-col justify-center items-center w-full max-w-4xl min-h-screen">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl text-stone-900 dark:text-stone-50 text-center">Jeremy Chernin</h1>
-                    <h2 className="text-lg sm:text-xl text-stone-600 dark:text-stone-400 text-center">Computer Science Student at Penn State University</h2>
-                    <a
-                        href="/Jeremy Chernin - Master Resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-6 px-6 py-3 bg-stone-900 dark:bg-stone-50 text-stone-50 dark:text-stone-900 rounded-lg font-medium hover:bg-stone-700 dark:hover:bg-stone-200 transition-colors"
-                    >
-                        View Resume
-                    </a>
+            <main className="flex flex-col items-center min-h-screen px-4 sm:px-6 lg:px-8 relative z-10">
+                {/* Hero Section */}
+                <section id="home" className="flex flex-col justify-center items-center w-full max-w-5xl min-h-screen relative">
+                    {/* Decorative accent glow */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500 rounded-full opacity-10 blur-[120px] animate-glow-pulse pointer-events-none" />
+
+                    {mounted && (
+                        <div className="relative z-10 text-center">
+                            {/* Overline */}
+                            <div className="flex items-center justify-center gap-3 mb-6 opacity-0 animate-fade-in">
+                                <div className="w-12 h-px bg-orange-600 dark:bg-orange-400" />
+                                <span className="text-xs font-semibold tracking-[0.3em] uppercase text-stone-500 dark:text-stone-400">
+                                    Software Developer
+                                </span>
+                                <div className="w-12 h-px bg-orange-600 dark:bg-orange-400" />
+                            </div>
+
+                            {/* Main Name */}
+                            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight text-stone-900 dark:text-stone-50 opacity-0 animate-slide-up">
+                                Jeremy <span className="gradient-text">Chernin</span>
+                            </h1>
+
+                            {/* Subtitle */}
+                            <p className="mt-8 text-lg sm:text-xl text-stone-500 dark:text-stone-400 max-w-md mx-auto opacity-0 animate-fade-in delay-400">
+                                Computer Science Student at{" "}
+                                <span className="text-stone-900 dark:text-stone-50 font-medium">Penn State University</span>
+                            </p>
+
+                            {/* CTA Buttons */}
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 opacity-0 animate-slide-up delay-500">
+                                <a
+                                    href="/Jeremy Chernin - Master Resume.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative px-8 py-4 bg-stone-900 dark:bg-stone-50 text-stone-50 dark:text-stone-900 font-semibold overflow-hidden transition-transform hover:scale-105"
+                                >
+                                    <span className="relative z-10 flex items-center gap-2">
+                                        View Resume
+                                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </span>
+                                    <div className="absolute inset-0 bg-orange-600 dark:bg-orange-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                                </a>
+                                <a
+                                    href="#about"
+                                    className="px-8 py-4 border-2 border-stone-300 dark:border-stone-700 text-stone-900 dark:text-stone-50 font-semibold hover:border-orange-600 hover:text-orange-600 dark:hover:border-orange-400 dark:hover:text-orange-400 transition-colors"
+                                >
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Scroll indicator - positioned relative to section, not content */}
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in delay-700">
+                        <div className="flex flex-col items-center gap-2 text-stone-500 dark:text-stone-400">
+                            <span className="text-xs tracking-widest uppercase">Scroll</span>
+                            <div className="w-px h-8 bg-gradient-to-b from-stone-400 dark:from-stone-500 to-transparent animate-float" />
+                        </div>
+                    </div>
                 </section>
 
+                {/* About Section */}
                 <section id="about" className="flex flex-col justify-center w-full max-w-4xl min-h-screen py-20">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl text-stone-900 dark:text-stone-50">About Me</h1>
-                    <p className="text-lg sm:text-xl text-stone-700 dark:text-stone-300">Hello! I&apos;m Jeremy, a student and software developer from the Greater
-                        Philadelphia area, Pennsylvania. I&apos;ve been passionate about programming since 2014,
-                        focusing on developing APIs, games, and dashboards for personal and commerical use.</p>
+                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-stone-900 dark:text-stone-50 mb-8">
+                        About Me
+                    </h2>
+
+                    <div className="space-y-8">
+                        <p className="text-xl text-stone-700 dark:text-stone-300 leading-relaxed">
+                            Hello! I&apos;m Jeremy, a student and software developer from the Greater Philadelphia area. I&apos;ve been passionate about programming since 2014, focusing on developing APIs, games, and dashboards for personal and commercial use.
+                        </p>
+
+                        {/* Highlights */}
+                        <div className="flex flex-wrap gap-6">
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+                                    <span className="text-orange-600 dark:text-orange-400 font-bold">10+</span>
+                                </div>
+                                <span className="text-stone-600 dark:text-stone-400">Years coding</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+                                    <span className="text-orange-600 dark:text-orange-400 font-bold">3x</span>
+                                </div>
+                                <span className="text-stone-600 dark:text-stone-400">Hackathon winner</span>
+                            </div>
+                        </div>
+
+                        {/* Social links */}
+                        <div className="flex flex-wrap gap-4 pt-4">
+                            <a
+                                href="https://github.com/jchernin4"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-orange-100 hover:text-orange-600 dark:hover:bg-orange-900/30 dark:hover:text-orange-400 transition-colors"
+                            >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/jeremychernin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-orange-100 hover:text-orange-600 dark:hover:bg-orange-900/30 dark:hover:text-orange-400 transition-colors"
+                            >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
                 </section>
 
                 <Skills />
 
                 <section id="experience" className="flex flex-col justify-center w-full max-w-4xl min-h-screen py-20">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-8 text-stone-900 dark:text-stone-50">Work Experience</h1>
+                    {/* Section header */}
+                    <div className="mb-12">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-12 h-px bg-orange-600 dark:bg-orange-400" />
+                            <span className="text-xs font-semibold tracking-[0.3em] uppercase text-stone-500 dark:text-stone-400">
+                                Career
+                            </span>
+                        </div>
+                        <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-stone-900 dark:text-stone-50">
+                            Work Experience
+                        </h2>
+                        <p className="mt-4 text-lg text-stone-500 dark:text-stone-400 max-w-2xl">
+                            Building real-world solutions through internships and professional experience.
+                        </p>
+                    </div>
 
-                    <ProjectCard
-                        startDate="June 2025"
-                        endDate="August 2025"
-                        title="Customer Solutions Consultant Intern"
-                        company="Boomi"
-                        location="Conshohocken, PA"
-                        description="Automated structured PDF data extraction, API integrations, anomaly detection, and email routing using Boomi's AI AgentStudio and iPaaS platform, following Agile methodologies for iterative delivery. Engineered a customer support algorithm that ranks ticket urgency using 10+ metrics including ACV, ARR, and churn risk, using Java to validate data and notify technical success teams of rankings & anomalies through Slack and email integrations. Developed an AI-enhanced productivity app that won a company hackathon by extracting action items from emails and meeting transcripts, and automating follow-up tasks like sending emails or making Jira tickets using Boomi's AI."
-                        techStack={["Boomi", "Java", "AI AgentStudio", "iPaaS", "Agile", "Slack API", "Jira"]}
-                    />
+                    {/* Timeline container */}
+                    <div className="relative pl-2">
+                        <ProjectCard
+                            startDate="June 2025"
+                            endDate="August 2025"
+                            title="Customer Solutions Consultant Intern"
+                            company="Boomi"
+                            location="Conshohocken, PA"
+                            description="Automated structured PDF data extraction, API integrations, anomaly detection, and email routing using Boomi's AI AgentStudio and iPaaS platform, following Agile methodologies for iterative delivery. Engineered a customer support algorithm that ranks ticket urgency using 10+ metrics including ACV, ARR, and churn risk, using Java to validate data and notify technical success teams of rankings & anomalies through Slack and email integrations. Developed an AI-enhanced productivity app that won a company hackathon by extracting action items from emails and meeting transcripts, and automating follow-up tasks like sending emails or making Jira tickets using Boomi's AI."
+                            techStack={["Boomi", "Java", "AI AgentStudio", "iPaaS", "Agile", "Slack API", "Jira"]}
+                        />
 
-                    <ProjectCard
-                        startDate="June 2024"
-                        endDate="August 2024"
-                        title="Product & Sales Intern"
-                        company="Quench"
-                        location="King of Prussia, PA"
-                        description="Organized sales data through a Power BI dashboard to automate a monthly sales reporting process saving 2+ hours per request. Partnered with cross-functional teams to customize analytics ensuring the dashboard aligned with the business's needs."
-                        techStack={["Power BI", "Data Analytics", "Sales Operations"]}
-                    />
+                        <ProjectCard
+                            startDate="June 2024"
+                            endDate="August 2024"
+                            title="Product & Sales Intern"
+                            company="Quench"
+                            location="King of Prussia, PA"
+                            description="Organized sales data through a Power BI dashboard to automate a monthly sales reporting process saving 2+ hours per request. Partnered with cross-functional teams to customize analytics ensuring the dashboard aligned with the business's needs."
+                            techStack={["Power BI", "Data Analytics", "Sales Operations"]}
+                        />
+                    </div>
                 </section>
 
                 <section id="projects" className="flex flex-col justify-center w-full max-w-4xl min-h-screen py-20">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-8 text-stone-900 dark:text-stone-50">Projects</h1>
+                    {/* Section header */}
+                    <div className="mb-12">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-12 h-px bg-orange-600 dark:bg-orange-400" />
+                            <span className="text-xs font-semibold tracking-[0.3em] uppercase text-stone-500 dark:text-stone-400">
+                                Portfolio
+                            </span>
+                        </div>
+                        <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-stone-900 dark:text-stone-50">
+                            Projects
+                        </h2>
+                        <p className="mt-4 text-lg text-stone-500 dark:text-stone-400 max-w-2xl">
+                            A collection of personal and collaborative projects spanning web development, game design, and more.
+                        </p>
+                    </div>
 
                     <ProjectCarousel projects={[
                         {
@@ -214,8 +361,19 @@ export default function Home() {
                         }
                     ]} />
 
-                    <div className="mt-8">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-6 text-stone-900 dark:text-stone-50">Hackathons</h2>
+                    <div className="mt-16">
+                        {/* Hackathons header */}
+                        <div className="mb-8">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-8 h-px bg-orange-600 dark:bg-orange-400" />
+                                <span className="text-xs font-semibold tracking-[0.2em] uppercase text-stone-500 dark:text-stone-400">
+                                    Competitions
+                                </span>
+                            </div>
+                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-900 dark:text-stone-50">
+                                Hackathons
+                            </h3>
+                        </div>
 
                         <ProjectCard
                             startDate="October 2023"
@@ -237,10 +395,23 @@ export default function Home() {
                             techStack={["Twilio", "Web Development"]}
                         />
 
-                        <div className="mt-4 p-4 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
-                            <p className="text-sm text-stone-600 dark:text-stone-400">
-                                Also participated in: HackPSU Fall 2023, HackPSU Fall 2025, and Brickhack 9 Fall 2023
-                            </p>
+                        {/* Other hackathons note */}
+                        <div className="mt-8 p-5 rounded-xl bg-stone-100/50 dark:bg-stone-800/50 backdrop-blur-sm border border-stone-200 dark:border-stone-700">
+                            <div className="flex items-start gap-3">
+                                <div className="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg className="w-4 h-4 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p className="text-sm font-medium text-stone-700 dark:text-stone-300 mb-1">
+                                        Also participated in:
+                                    </p>
+                                    <p className="text-sm text-stone-500 dark:text-stone-400">
+                                        HackPSU Fall 2023, HackPSU Fall 2025, and Brickhack 9 Fall 2023
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

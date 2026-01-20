@@ -8,155 +8,101 @@ const skillCategories = [
     {
         type: "languages",
         label: "Languages",
-        color: "blue",
+        icon: (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+        ),
         skills: [
-            {name: "Java", icon: "java"},
-            {name: "C#", icon: "csharp"},
-            {name: "C++", icon: "c++"},
-            {name: "TypeScript", icon: "typescript"},
-            {name: "JavaScript", icon: "js"},
-            {name: "HTML", icon: "html5"},
-            {name: "CSS", icon: "css3"},
-            {name: "SQL", icon: "mysql"},
-            {name: "C", icon: null},
+            { name: "Java", icon: "java" },
+            { name: "C#", icon: "csharp" },
+            { name: "C++", icon: "c++" },
+            { name: "TypeScript", icon: "typescript" },
+            { name: "JavaScript", icon: "js" },
+            { name: "HTML", icon: "html5" },
+            { name: "CSS", icon: "css3" },
+            { name: "SQL", icon: "mysql" },
+            { name: "C", icon: null },
         ],
     },
     {
         type: "frameworks",
         label: "Frameworks",
-        color: "green",
+        icon: (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+        ),
         skills: [
-            {name: "Next.js", icon: "nextjs2"},
-            {name: "React", icon: "react"},
-            {name: "Node.js", icon: "nodejs"},
-            {name: "TailwindCSS", icon: "tailwindcss"},
-            {name: "Zod", icon: "zod"},
-            {name: "Jetty", icon: null},
-            {name: "Avalonia", icon: null},
-            {name: "WPF", icon: null},
-            {name: "Selenium", icon: null},
+            { name: "Next.js", icon: "nextjs2" },
+            { name: "React", icon: "react" },
+            { name: "Node.js", icon: "nodejs" },
+            { name: "TailwindCSS", icon: "tailwindcss" },
+            { name: "Zod", icon: "zod" },
+            { name: "Jetty", icon: null },
+            { name: "Avalonia", icon: null },
+            { name: "WPF", icon: null },
+            { name: "Selenium", icon: null },
         ],
     },
     {
         type: "databases",
         label: "Databases",
-        color: "purple",
+        icon: (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+            </svg>
+        ),
         skills: [
-            {name: "MongoDB", icon: "mongodb"},
-            {name: "MySQL", icon: "mysql"},
-            {name: "PostgreSQL", icon: "postgresql"},
-            {name: "Supabase", icon: "supabase"},
+            { name: "MongoDB", icon: "mongodb" },
+            { name: "MySQL", icon: "mysql" },
+            { name: "PostgreSQL", icon: "postgresql" },
+            { name: "Supabase", icon: "supabase" },
         ],
     },
     {
         type: "tools",
         label: "Tools",
-        color: "orange",
+        icon: (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+        ),
         skills: [
-            {name: "Git", icon: "git"},
-            {name: "GitHub", icon: "github"},
-            {name: "Docker", icon: "docker"},
-            {name: "Linux", icon: "linux"},
-            {name: "Cloudflare", icon: "cloudflare"},
-            {name: "DigitalOcean", icon: "digitalocean"},
-            {name: "Postman", icon: "postman"},
-            {name: "Jira", icon: "jira"},
-            {name: "Claude Code", icon: "claude"},
-            {name: "Cursor", icon: "cursor"},
-            {name: "Neovim", icon: "neovim"},
-            {name: "Twilio", icon: "twilio"},
-            {name: "Nginx", icon: null},
-            {name: "Jenkins", icon: null},
-            {name: "Power BI", icon: null},
+            { name: "Git", icon: "git" },
+            { name: "GitHub", icon: "github" },
+            { name: "Docker", icon: "docker" },
+            { name: "Linux", icon: "linux" },
+            { name: "Cloudflare", icon: "cloudflare" },
+            { name: "DigitalOcean", icon: "digitalocean" },
+            { name: "Postman", icon: "postman" },
+            { name: "Jira", icon: "jira" },
+            { name: "Claude Code", icon: "claude" },
+            { name: "Cursor", icon: "cursor" },
+            { name: "Neovim", icon: "neovim" },
+            { name: "Twilio", icon: "twilio" },
+            { name: "Nginx", icon: null },
+            { name: "Jenkins", icon: null },
+            { name: "Power BI", icon: null },
         ],
     },
 ];
 
-const colorStyles = {
-    blue: "border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/30 hover:bg-blue-100 dark:hover:bg-blue-900/40",
-    green: "border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-950/30 hover:bg-green-100 dark:hover:bg-green-900/40",
-    purple: "border-purple-200 dark:border-purple-900 bg-purple-50 dark:bg-purple-950/30 hover:bg-purple-100 dark:hover:bg-purple-900/40",
-    orange: "border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950/30 hover:bg-orange-100 dark:hover:bg-orange-900/40",
-};
-
-function SkillItem({name, icon, color}: { name: string; icon: string | null; color: keyof typeof colorStyles }) {
+function SkillItem({ name, icon }: { name: string; icon: string | null }) {
     return (
-        <div
-            className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-colors ${colorStyles[color]}`}>
+        <div className="group/skill flex items-center gap-2.5 px-4 py-2.5 rounded-lg border border-stone-200 dark:border-stone-700 bg-white/50 dark:bg-stone-800/50 backdrop-blur-sm transition-all duration-200 hover:border-orange-400/50 dark:hover:border-orange-600/50 hover:shadow-md hover:shadow-orange-500/5">
             {icon ? (
-                <StackIcon name={icon} className="w-5 h-5" variant="dark"/>
-            ) : null}
+                <StackIcon name={icon} className="w-5 h-5 transition-transform duration-200 group-hover/skill:scale-110" />
+            ) : (
+                <div className="w-5 h-5 rounded bg-stone-200 dark:bg-stone-700 flex items-center justify-center">
+                    <span className="text-[10px] font-bold text-stone-500 dark:text-stone-400">
+                        {name.charAt(0)}
+                    </span>
+                </div>
+            )}
             <span className="text-sm text-stone-700 dark:text-stone-300 font-medium">{name}</span>
         </div>
-    );
-}
-
-function PieSlice({
-    category,
-    index,
-    total,
-    hoveredCategory,
-    onHover
-}: {
-    category: typeof skillCategories[0];
-    index: number;
-    total: number;
-    hoveredCategory: string | null;
-    onHover: (type: string | null) => void;
-}) {
-    const sliceAngle = (2 * Math.PI) / total;
-    const startAngle = index * sliceAngle - Math.PI / 2;
-    const endAngle = startAngle + sliceAngle;
-    const innerRadius = 40;
-    const outerRadius = 150;
-    const isHovered = hoveredCategory === category.type;
-    const expandRadius = isHovered ? 165 : outerRadius;
-
-    const createArc = (innerR: number, outerR: number) => {
-        const x1 = 200 + innerR * Math.cos(startAngle);
-        const y1 = 200 + innerR * Math.sin(startAngle);
-        const x2 = 200 + outerR * Math.cos(startAngle);
-        const y2 = 200 + outerR * Math.sin(startAngle);
-        const x3 = 200 + outerR * Math.cos(endAngle);
-        const y3 = 200 + outerR * Math.sin(endAngle);
-        const x4 = 200 + innerR * Math.cos(endAngle);
-        const y4 = 200 + innerR * Math.sin(endAngle);
-        const largeArc = sliceAngle > Math.PI ? 1 : 0;
-
-        return `M ${x1} ${y1} L ${x2} ${y2} A ${outerR} ${outerR} 0 ${largeArc} 1 ${x3} ${y3} L ${x4} ${y4} A ${innerR} ${innerR} 0 ${largeArc} 0 ${x1} ${y1} Z`;
-    };
-
-    const labelAngle = startAngle + sliceAngle / 2;
-    const labelRadius = (innerRadius + outerRadius) / 2;
-    const labelX = 200 + labelRadius * Math.cos(labelAngle);
-    const labelY = 200 + labelRadius * Math.sin(labelAngle);
-
-    return (
-        <g>
-            <motion.path
-                d={createArc(innerRadius, expandRadius)}
-                className={`${isHovered ? 'fill-stone-300/50 dark:fill-stone-700/50' : 'fill-stone-200/30 dark:fill-stone-800/30'} stroke-stone-400/60 dark:stroke-stone-600/60 cursor-pointer stroke-[3]`}
-                onMouseEnter={() => onHover(category.type)}
-                onMouseLeave={() => onHover(null)}
-                initial={false}
-                animate={{
-                    d: createArc(innerRadius, expandRadius),
-                }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                style={{
-                    filter: isHovered ? "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))" : "none",
-                }}
-            />
-            <text
-                x={labelX}
-                y={labelY}
-                textAnchor="middle"
-                dominantBaseline="middle"
-                className="text-sm font-bold fill-stone-600 dark:fill-stone-400 pointer-events-none select-none"
-            >
-                {category.label}
-            </text>
-        </g>
     );
 }
 
@@ -164,65 +110,84 @@ export default function Skills() {
     const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
 
     return (
-        <section id="skills" className="flex flex-col justify-center items-center w-full max-w-5xl min-h-screen py-20">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-12 text-stone-900 dark:text-stone-50">Skills</h1>
+        <section id="skills" className="flex flex-col justify-center w-full max-w-4xl min-h-screen py-20">
+            {/* Section header */}
+            <div className="mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-px bg-orange-600 dark:bg-orange-400" />
+                    <span className="text-xs font-semibold tracking-[0.3em] uppercase text-stone-500 dark:text-stone-400">
+                        Expertise
+                    </span>
+                </div>
+                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-stone-900 dark:text-stone-50">
+                    Skills
+                </h2>
+                <p className="mt-4 text-lg text-stone-500 dark:text-stone-400 max-w-2xl">
+                    Technologies and tools I use to bring ideas to life.
+                </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                 {skillCategories.map((category, categoryIndex) => (
                     <motion.div
                         key={category.type}
-                        className="relative p-8 rounded-2xl border border-stone-200 dark:border-stone-800 bg-stone-50/50 dark:bg-stone-900/50 backdrop-blur-sm"
+                        className="group relative overflow-hidden rounded-xl border border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/50 backdrop-blur-sm transition-all duration-300"
                         onHoverStart={() => setHoveredCategory(category.type)}
                         onHoverEnd={() => setHoveredCategory(null)}
                         initial={false}
                         animate={{
-                            scale: hoveredCategory === category.type ? 1.02 : 1,
                             borderColor: hoveredCategory === category.type
-                                ? 'rgba(120, 120, 128, 0.4)'
+                                ? 'rgba(251, 146, 60, 0.5)'
                                 : 'rgba(120, 120, 128, 0.2)',
                         }}
                         transition={{ duration: 0.2 }}
                     >
-                        <h3 className="text-2xl font-bold text-stone-900 dark:text-stone-50 mb-6">
-                            {category.label}
-                        </h3>
+                        {/* Accent line on hover */}
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-orange-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-                        <div className="flex flex-wrap gap-3">
-                            <AnimatePresence mode="sync">
-                                {category.skills.map((skill, skillIndex) => (
-                                    <motion.div
-                                        key={skill.name}
-                                        initial={{
-                                            scale: 0,
-                                            opacity: 0,
-                                            y: 20
-                                        }}
-                                        animate={{
-                                            scale: hoveredCategory === category.type ? 1 : 0.95,
-                                            opacity: 1,
-                                            y: 0
-                                        }}
-                                        exit={{
-                                            scale: 0,
-                                            opacity: 0,
-                                            y: 20
-                                        }}
-                                        transition={{
-                                            duration: 0.3,
-                                            delay: hoveredCategory === category.type
-                                                ? skillIndex * 0.03
-                                                : categoryIndex * 0.1 + skillIndex * 0.02,
-                                            ease: "easeOut"
-                                        }}
-                                    >
-                                        <SkillItem
-                                            name={skill.name}
-                                            icon={skill.icon}
-                                            color={category.color as keyof typeof colorStyles}
-                                        />
-                                    </motion.div>
-                                ))}
-                            </AnimatePresence>
+                        <div className="p-6 sm:p-8">
+                            {/* Category header */}
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
+                                    {category.icon}
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-stone-900 dark:text-stone-50">
+                                        {category.label}
+                                    </h3>
+                                    <p className="text-xs text-stone-500 dark:text-stone-400">
+                                        {category.skills.length} technologies
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap gap-2.5">
+                                <AnimatePresence mode="sync">
+                                    {category.skills.map((skill, skillIndex) => (
+                                        <motion.div
+                                            key={skill.name}
+                                            initial={{
+                                                scale: 0.8,
+                                                opacity: 0,
+                                            }}
+                                            animate={{
+                                                scale: 1,
+                                                opacity: 1,
+                                            }}
+                                            transition={{
+                                                duration: 0.3,
+                                                delay: categoryIndex * 0.1 + skillIndex * 0.02,
+                                                ease: "easeOut"
+                                            }}
+                                        >
+                                            <SkillItem
+                                                name={skill.name}
+                                                icon={skill.icon}
+                                            />
+                                        </motion.div>
+                                    ))}
+                                </AnimatePresence>
+                            </div>
                         </div>
                     </motion.div>
                 ))}
