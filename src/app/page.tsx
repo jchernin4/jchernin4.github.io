@@ -408,7 +408,7 @@ export default function Home() {
                                         Also participated in:
                                     </p>
                                     <p className="text-sm text-stone-500 dark:text-stone-400">
-                                        HackPSU Fall 2023, HackPSU Fall 2025, and Brickhack 9 Fall 2023
+                                        HackPSU Fall 2023, HackPSU Fall 2025
                                     </p>
                                 </div>
                             </div>
