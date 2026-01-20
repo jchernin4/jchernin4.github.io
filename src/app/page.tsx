@@ -203,7 +203,7 @@ export default function Home() {
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
-                                    <span className="text-orange-600 dark:text-orange-400 font-bold">3x</span>
+                                    <span className="text-orange-600 dark:text-orange-400 font-bold">2x</span>
                                 </div>
                                 <span className="text-stone-600 dark:text-stone-400">Hackathon winner</span>
                             </div>
