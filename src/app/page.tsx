@@ -321,7 +321,7 @@ export default function Home() {
                             startDate: "January 2023",
                             endDate: "April 2023",
                             link: "https://store.steampowered.com/app/2102180/Neurosis/",
-                            image: "https://placehold.co/800x400/e7e5e4/57534e?text=Neurosis",
+                            image: "/Neurosis.jpg",
                             description: "Developed a single-player horror puzzle game using the Unity game engine with Blender for modeling. Implemented a custom modular inventory and interaction system in C# to handle object collection and user actions to drive gameplay.",
                             techStack: ["Unity", "C#", "Blender"]
                         },
@@ -347,7 +347,7 @@ export default function Home() {
                             startDate: "February 2023",
                             endDate: "February 2023",
                             githubLink: "https://github.com/jchernin4/RIT-Brickhack",
-                            image: "https://placehold.co/800x400/e7e5e4/57534e?text=Math+Maze",
+                            image: "/MathMaze.jpg",
                             description: "A submission for RIT's Brickhack hackathon. It is a multiplayer game made in Unity, which let players compete to solve math problems before the other player.",
                             techStack: ["Unity", "C#", "Blender", "Mirror"]
                         },
