@@ -1,6 +1,6 @@
 "use client";
 
-export default function ProjectCard({ title, startDate, endDate, link, description, techStack, company, location, image, githubLink }: { title: string; startDate: string; endDate: string; link?: string; description: string; techStack: string[]; company?: string; location?: string; image?: string; githubLink?: string }) {
+export default function InfoCard({ title, startDate, endDate, link, description, techStack, company, location, image, githubLink }: { title: string; startDate: string; endDate: string; link?: string; description: string; techStack: string[]; company?: string; location?: string; image?: string; githubLink?: string }) {
     const handleCardClick = () => {
         if (link) {
             window.open(link, '_blank', 'noopener,noreferrer');

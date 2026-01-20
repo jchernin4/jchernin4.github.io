@@ -119,9 +119,14 @@ body {
   @apply w-2 h-2 bg-orange-600 dark:bg-orange-400 rounded-full;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling and prevent horizontal overflow */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Selection styling */

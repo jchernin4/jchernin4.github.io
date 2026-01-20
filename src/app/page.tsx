@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectCard from "@/components/project-card/projectCard";
+import InfoCard from "@/components/project-card/InfoCard";
 import Skills from "@/components/skills/Skills";
 import ProjectCarousel from "@/components/project-carousel/ProjectCarousel";
 import ThemeToggle from "@/components/theme-toggle/ThemeToggle";
@@ -45,8 +45,8 @@ export default function Home() {
             <InteractiveBackground />
 
             <nav className="fixed top-0 left-0 right-0 z-50">
-                <div className="mx-4 sm:mx-6 lg:mx-8 mt-4">
-                    <div className="max-w-5xl mx-auto px-6 py-3 rounded-full backdrop-blur-md bg-white/70 dark:bg-stone-900/70 border border-stone-200/50 dark:border-stone-700/50 shadow-lg shadow-stone-900/5 dark:shadow-stone-900/20">
+                <div className="mx-3 sm:mx-6 lg:mx-8 mt-3 sm:mt-4">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl sm:rounded-full backdrop-blur-md bg-white/70 dark:bg-stone-900/70 border border-stone-200/50 dark:border-stone-700/50 shadow-lg shadow-stone-900/5 dark:shadow-stone-900/20">
                         <div className="flex items-center justify-between">
                             {/* Logo */}
                             <a href="#home" className="group flex items-center gap-2">
@@ -75,22 +75,25 @@ export default function Home() {
                                 <ThemeToggle />
                             </div>
 
-                            {/* Mobile Hamburger Button */}
-                            <button
-                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="md:hidden p-2 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-all"
-                                aria-label="Toggle menu"
-                            >
-                                {isMobileMenuOpen ? (
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                ) : (
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                                    </svg>
-                                )}
-                            </button>
+                            {/* Mobile Controls */}
+                            <div className="md:hidden flex items-center gap-1">
+                                <ThemeToggle />
+                                <button
+                                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                    className="p-2 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-all"
+                                    aria-label="Toggle menu"
+                                >
+                                    {isMobileMenuOpen ? (
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    ) : (
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                        </svg>
+                                    )}
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -109,10 +112,6 @@ export default function Home() {
                                             {link.label}
                                         </a>
                                     ))}
-                                    <div className="flex items-center justify-between px-4 py-3 mt-2 border-t border-stone-200 dark:border-stone-700">
-                                        <span className="text-sm text-stone-500 dark:text-stone-400">Theme</span>
-                                        <ThemeToggle />
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -122,9 +121,9 @@ export default function Home() {
 
             <main className="flex flex-col items-center min-h-screen px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Hero Section */}
-                <section id="home" className="flex flex-col justify-center items-center w-full max-w-5xl min-h-screen relative">
+                <section id="home" className="flex flex-col justify-center items-center w-full max-w-5xl min-h-screen relative overflow-hidden">
                     {/* Decorative accent glow */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500 rounded-full opacity-10 blur-[120px] animate-glow-pulse pointer-events-none" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] bg-orange-500 rounded-full opacity-10 blur-[80px] sm:blur-[100px] md:blur-[120px] animate-glow-pulse pointer-events-none" />
 
                     {mounted && (
                         <div className="relative z-10 text-center">
@@ -259,7 +258,7 @@ export default function Home() {
 
                     {/* Timeline container */}
                     <div className="relative pl-2">
-                        <ProjectCard
+                        <InfoCard
                             startDate="June 2025"
                             endDate="August 2025"
                             title="Customer Solutions Consultant Intern"
@@ -269,7 +268,7 @@ export default function Home() {
                             techStack={["Boomi", "Java", "AI AgentStudio", "iPaaS", "Agile", "Slack API", "Jira"]}
                         />
 
-                        <ProjectCard
+                        <InfoCard
                             startDate="June 2024"
                             endDate="August 2024"
                             title="Product & Sales Intern"
@@ -317,15 +316,6 @@ export default function Home() {
                             techStack: ["Next.js", "MongoDB", "Jenkins", "TailwindCSS", "TypeScript", "Recharts", "Google Analytics"]
                         },
                         {
-                            title: "Neurosis",
-                            startDate: "January 2023",
-                            endDate: "April 2023",
-                            link: "https://store.steampowered.com/app/2102180/Neurosis/",
-                            image: "/Neurosis.jpg",
-                            description: "Developed a single-player horror puzzle game using the Unity game engine with Blender for modeling. Implemented a custom modular inventory and interaction system in C# to handle object collection and user actions to drive gameplay.",
-                            techStack: ["Unity", "C#", "Blender"]
-                        },
-                        {
                             title: "AsciiJack",
                             startDate: "January 2024",
                             endDate: "January 2024",
@@ -343,13 +333,13 @@ export default function Home() {
                             techStack: ["Unity", "C#", "Blender"]
                         },
                         {
-                            title: "Math Maze",
-                            startDate: "February 2023",
-                            endDate: "February 2023",
-                            githubLink: "https://github.com/jchernin4/RIT-Brickhack",
-                            image: "/MathMaze.jpg",
-                            description: "A submission for RIT's Brickhack hackathon. It is a multiplayer game made in Unity, which let players compete to solve math problems before the other player.",
-                            techStack: ["Unity", "C#", "Blender", "Mirror"]
+                            title: "Neurosis",
+                            startDate: "January 2023",
+                            endDate: "April 2023",
+                            link: "https://store.steampowered.com/app/2102180/Neurosis/",
+                            image: "/Neurosis.jpg",
+                            description: "Developed a single-player horror puzzle game using the Unity game engine with Blender for modeling. Implemented a custom modular inventory and interaction system in C# to handle object collection and user actions to drive gameplay.",
+                            techStack: ["Unity", "C#", "Blender"]
                         },
                         {
                             title: "Project Zero",
@@ -375,7 +365,7 @@ export default function Home() {
                             </h3>
                         </div>
 
-                        <ProjectCard
+                        <InfoCard
                             startDate="October 2023"
                             endDate="HackPSU"
                             title="AdLite"
@@ -385,11 +375,21 @@ export default function Home() {
                             techStack={["Python", "Taipy", "Cryptocurrency"]}
                         />
 
-                        <ProjectCard
+                        <InfoCard
+                            startDate="February 2023"
+                            endDate="Brickhack 9"
+                            title="Math Maze"
+                            link="https://devpost.com/software/mathmaze"
+                            githubLink="https://github.com/jchernin4/RIT-Brickhack"
+                            description="A multiplayer game made in Unity which let players compete to solve math problems before the other player."
+                            techStack={["Unity", "C#", "Mirror"]}
+                        />
+
+                        <InfoCard
                             startDate="Spring 2023"
                             endDate="HackPSU"
                             title="GreenSolve"
-                            link="https://devpost.com/software/mathmaze"
+                            link="https://devpost.com/software/greensolve"
                             githubLink="https://github.com/jchernin4/GreenSolve-HackPSU2022"
                             description="1st Place - Sustainability and Most Creative Use of Twilio. Developed a website that shares local green projects to promote environmental awareness."
                             techStack={["Twilio", "Web Development"]}
