@@ -3,6 +3,7 @@
 import ProjectCard from "@/components/project-card/projectCard";
 import Skills from "@/components/skills/Skills";
 import ProjectCarousel from "@/components/project-carousel/ProjectCarousel";
+import ThemeToggle from "@/components/theme-toggle/ThemeToggle";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -45,7 +46,7 @@ export default function Home() {
                         </a>
 
                         {/* Desktop Navigation */}
-                        <div className="hidden md:flex gap-6 lg:gap-8">
+                        <div className="hidden md:flex items-center gap-6 lg:gap-8">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.href}
@@ -55,6 +56,7 @@ export default function Home() {
                                     {link.label}
                                 </a>
                             ))}
+                            <ThemeToggle />
                         </div>
 
                         {/* Mobile Hamburger Button */}
@@ -89,6 +91,10 @@ export default function Home() {
                                         {link.label}
                                     </a>
                                 ))}
+                                <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
+                                    <span>Theme</span>
+                                    <ThemeToggle />
+                                </div>
                             </div>
                         </div>
                     )}
@@ -97,8 +103,8 @@ export default function Home() {
 
             <main className="flex flex-col items-center min-h-screen bg-stone-50 font-sans dark:bg-stone-950 px-4 sm:px-6 lg:px-8">
                 <section id="home" className="flex flex-col justify-center items-center w-full max-w-4xl min-h-screen">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl text-stone-50 text-center">Jeremy Chernin</h1>
-                    <h2 className="text-lg sm:text-xl text-stone-400 text-center">Computer Science Student at Penn State University</h2>
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl text-stone-900 dark:text-stone-50 text-center">Jeremy Chernin</h1>
+                    <h2 className="text-lg sm:text-xl text-stone-600 dark:text-stone-400 text-center">Computer Science Student at Penn State University</h2>
                     <a
                         href="/Jeremy Chernin - Master Resume.pdf"
                         target="_blank"
@@ -110,8 +116,8 @@ export default function Home() {
                 </section>
 
                 <section id="about" className="flex flex-col justify-center w-full max-w-4xl min-h-screen py-20">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl">About Me</h1>
-                    <p className="text-lg sm:text-xl">Hello! I&apos;m Jeremy, a student and software developer from the Greater
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl text-stone-900 dark:text-stone-50">About Me</h1>
+                    <p className="text-lg sm:text-xl text-stone-700 dark:text-stone-300">Hello! I&apos;m Jeremy, a student and software developer from the Greater
                         Philadelphia area, Pennsylvania. I&apos;ve been passionate about programming since 2014,
                         focusing on developing APIs, games, and dashboards for personal and commerical use.</p>
                 </section>
@@ -119,7 +125,7 @@ export default function Home() {
                 <Skills />
 
                 <section id="experience" className="flex flex-col justify-center w-full max-w-4xl min-h-screen py-20">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-8">Work Experience</h1>
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-8 text-stone-900 dark:text-stone-50">Work Experience</h1>
 
                     <ProjectCard
                         startDate="June 2025"
@@ -143,7 +149,7 @@ export default function Home() {
                 </section>
 
                 <section id="projects" className="flex flex-col justify-center w-full max-w-4xl min-h-screen py-20">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-8">Projects</h1>
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-8 text-stone-900 dark:text-stone-50">Projects</h1>
 
                     <ProjectCarousel projects={[
                         {

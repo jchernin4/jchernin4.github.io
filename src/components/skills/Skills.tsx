@@ -165,7 +165,7 @@ export default function Skills() {
 
     return (
         <section id="skills" className="flex flex-col justify-center items-center w-full max-w-5xl min-h-screen py-20">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-12">Skills</h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-12 text-stone-900 dark:text-stone-50">Skills</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                 {skillCategories.map((category, categoryIndex) => (
