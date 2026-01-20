@@ -312,7 +312,7 @@ export default function Home() {
                             startDate: "June 2024",
                             endDate: "March 2025",
                             link: "https://suitedapp.com/",
-                            image: "https://placehold.co/800x400/e7e5e4/57534e?text=Suited",
+                            image: "/Suited.png",
                             description: "Launched a poker bankroll tracker and analytics tool that analyzes poker sessions to identify performance trends and predict profit. Grew the site to 40+ members through Meta ad campaigns while utilizing Google Analytics for customer behavior analysis. Created a REST API to store game sessions, leagues, player stats, and more. Implemented responsive dashboards using Recharts and TailwindCSS for user-friendly cross-platform support.",
                             techStack: ["Next.js", "MongoDB", "Jenkins", "TailwindCSS", "TypeScript", "Recharts", "Google Analytics"]
                         },
